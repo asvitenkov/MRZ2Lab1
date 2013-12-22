@@ -6,8 +6,8 @@
 #include <QVector>
 
 
-//typedef arma::mat Matrix2DF;
-typedef arma::fmat Matrix2DF;
+typedef arma::mat Matrix2DF;
+//typedef arma::fmat Matrix2DF;
 
 class CNeuroPixel;
 class QImage;
@@ -54,7 +54,7 @@ public:
     CImage(const CImage &copy);
     CImage& operator=(const CImage &other);
 
-    static CImage fromImage(QImage &from);
+    static CImage fromImage(const QImage &from);
     static QImage toImage(const Matrix2DF &matrix);
 
     QVector<Segment*> *split(int r, int c) ;

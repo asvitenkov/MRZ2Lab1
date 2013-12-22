@@ -19,15 +19,33 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     image.cpp \
     neuralnetwork.cpp \
-    worker.cpp
+    worker.cpp \
+    thirdreport.cpp \
+    secondreport.cpp \
+    fourthreport.cpp \
+    firstreport.cpp \
+    defines.cpp
 
 HEADERS  += mainwindow.h \
     image.h \
     neuralnetwork.h \
-    worker.h
+    worker.h \
+    thirdreport.h \
+    secondreport.h \
+    fourthreport.h \
+    firstreport.h \
+    defines.h
 
 FORMS    += mainwindow.ui
 
+RESOURCES += \
+    images.qrc
 
 INCLUDEPATH += armadillo
 DEPENDPATH += armadillo
+
+
+QMAKE_LFLAGS += -O3
+
+QMAKE_CXXFLAGS_DEBUG += -DARMA_NO_DEBUG
+QMAKE_CFLAGS_RELEASE += -DARMA_NO_DEBUG

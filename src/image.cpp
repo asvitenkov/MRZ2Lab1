@@ -22,7 +22,7 @@ CImage& CImage::operator =(const CImage &other)
     return *this;
 }
 
-CImage CImage::fromImage(QImage &from)
+CImage CImage::fromImage(const QImage &from)
 {
     Q_ASSERT(!from.isNull());
 
